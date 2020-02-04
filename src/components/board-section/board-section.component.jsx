@@ -9,7 +9,8 @@ const BoardSection = ({
   editTask,
   setEditState,
   handleInputChange,
-  taskToEdit
+  taskToEdit,
+  initialTaskState
 }) => {
   const convertString = stringToConvert => {
     return stringToConvert
@@ -39,6 +40,7 @@ const BoardSection = ({
               setEditState={setEditState}
               handleInputChange={handleInputChange}
               taskToEdit={taskToEdit}
+              initialTaskState={initialTaskState}
               key={index}
             />
           );

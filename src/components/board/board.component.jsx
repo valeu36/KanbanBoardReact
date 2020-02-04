@@ -1,7 +1,9 @@
-import React from "react";
+import React from 'react';
 
-import AddNewTaskModalComponent from "../modal/add-new-task-modal.component";
-import BoardSection from "../board-section/board-section.component";
+import api from '../../api';
+
+import AddNewTaskModalComponent from '../modal/add-new-task-modal.component';
+import BoardSection from '../board-section/board-section.component';
 
 class Board extends React.Component {
   constructor(props) {
@@ -10,30 +12,47 @@ class Board extends React.Component {
     this.state = {
       tasks: [],
       task: {
-        title: "",
-        description: "",
-        owner: "",
-        status: "Pending"
+        title: '',
+        description: '',
+        owner: '',
+        status: 'Pending',
       },
-      editTaskIndex: 0
+      editTaskIndex: 0,
     };
   }
 
-  addTask = () => {
-    this.setState(
+  async componentDidMount() {
+    await this.getTasks();
+    console.log(this.state.tasks);
+  }
+
+  getTasks = async () => {
+    const tasks = await api.index('/tasks');
+    this.setState({ tasks: tasks.data });
+  };
+
+  addTask = async () => {
+    const taskToAdd = { ...this.state.task };
+
+    await this.setState(
       state => {
         const tasks = [...state.tasks];
         tasks.push(this.state.task);
 
         return {
-          tasks: tasks
+          tasks: tasks,
         };
       },
       () => {
-        console.log(this.state.tasks);
         this.initialTaskState();
-      }
+      },
     );
+
+    await api.store('/tasks', taskToAdd);
+
+    await this.getTasks();
+
+    console.log(this.state.tasks);
   };
 
   handleInputChange = (event, propName) => {
@@ -45,10 +64,9 @@ class Board extends React.Component {
         task[propName] = event.target.value;
 
         return {
-          task: task
+          task: task,
         };
       },
-      () => console.log(this.state.task)
     );
   };
 
@@ -56,29 +74,37 @@ class Board extends React.Component {
     this.setState(state => {
       const task = { ...state.task };
 
-      task.title = "";
-      task.description = "";
-      task.owner = "";
+      task.title = '';
+      task.description = '';
+      task.owner = '';
 
       return {
-        task: task
+        task: task,
       };
     });
   };
 
-  deleteTask = index => {
-    this.setState(state => {
+  deleteTask = async index => {
+    const taskToDelete = this.state.tasks[index];
+
+    console.log(taskToDelete.id);
+
+    await this.setState(state => {
       let tasks = [...state.tasks];
 
       tasks = tasks.filter((item, idx) => idx !== index);
 
       return {
-        tasks: tasks
+        tasks: tasks,
       };
     });
+
+    await api.destroy('/tasks', taskToDelete.id);
   };
 
-  editTask = index => {
+  editTask = async index => {
+    const taskToEdit = this.state.tasks[index];
+
     this.setState(
       state => {
         const tasks = [...state.tasks];
@@ -89,13 +115,15 @@ class Board extends React.Component {
         tasks[index].status = state.task.status;
 
         return {
-          tasks: tasks
+          tasks: tasks,
         };
       },
       () => {
         this.initialTaskState();
-      }
+      },
     );
+
+    await api.update('/tasks', taskToEdit.id, this.state.tasks[index]);
   };
 
   setEditState = editState => {
@@ -108,7 +136,7 @@ class Board extends React.Component {
       task.status = editState.status;
 
       return {
-        task: task
+        task: task,
       };
     });
   };
@@ -140,6 +168,7 @@ class Board extends React.Component {
             setEditState={this.setEditState}
             handleInputChange={this.handleInputChange}
             taskToEdit={this.state.task}
+            initialTaskState={this.initialTaskState}
           />
 
           <BoardSection
@@ -150,6 +179,7 @@ class Board extends React.Component {
             setEditState={this.setEditState}
             handleInputChange={this.handleInputChange}
             taskToEdit={this.state.task}
+            initialTaskState={this.initialTaskState}
           />
 
           <BoardSection
@@ -160,6 +190,7 @@ class Board extends React.Component {
             setEditState={this.setEditState}
             handleInputChange={this.handleInputChange}
             taskToEdit={this.state.task}
+            initialTaskState={this.initialTaskState}
           />
         </div>
       </div>

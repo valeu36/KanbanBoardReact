@@ -5,7 +5,8 @@ const EditTaskModalComponent = ({
   handleInputChange,
   editTask,
   index,
-  taskToEdit
+  taskToEdit,
+  initialTaskState
 }) => (
   <div
     className="modal fade"
@@ -113,6 +114,7 @@ const EditTaskModalComponent = ({
             type="button"
             className="btn btn-secondary"
             data-dismiss="modal"
+            onClick={() => initialTaskState()}
           >
             Close
           </button>
