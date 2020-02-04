@@ -27,6 +27,7 @@ const EditTaskModalComponent = ({
             className="close"
             data-dismiss="modal"
             aria-label="Close"
+            onClick={() => initialTaskState()}x
           >
             <span aria-hidden="true">&times;</span>
           </button>

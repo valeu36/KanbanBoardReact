@@ -12,6 +12,8 @@ const BoardSection = ({
   taskToEdit,
   initialTaskState
 }) => {
+  const boardSectionTasks = [...tasks];
+
   const convertString = stringToConvert => {
     return stringToConvert
       .toLowerCase()
@@ -23,7 +25,7 @@ const BoardSection = ({
     <div className="col-4">
       <h3>{boardStatusName}</h3>
 
-      {tasks.map((task, index) => {
+      {boardSectionTasks.map((task, index) => {
         const convertedBoardStatusName = convertString(boardStatusName);
         const convertedTaskStatusName = convertString(task.status);
 

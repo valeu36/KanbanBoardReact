@@ -1,6 +1,6 @@
 import React from "react";
 
-import EditTaskModalComponent from "../modal/edit-task-modal.component";
+import EditTaskModal from "../modal/edit-task-modal.component";
 
 const Task = ({
   title,
@@ -12,14 +12,16 @@ const Task = ({
   editTask,
   setEditState,
   handleInputChange,
-  taskToEdit
+  taskToEdit,
+  initialTaskState
 }) => (
   <div>
-    <EditTaskModalComponent
+    <EditTaskModal
       index={index}
       taskToEdit={taskToEdit}
       handleInputChange={handleInputChange}
       editTask={editTask}
+      initialTaskState={initialTaskState}
     />
 
     <div className="card m-3 d-flex">
