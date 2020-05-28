@@ -10,6 +10,7 @@ class App extends React.Component {
 			<div className='App container'>
 				<Board />
 				Some shit, Some shit qwer
+				LUUUUUUL
 			</div>
 		);
 	}
