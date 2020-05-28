@@ -8,3 +8,7 @@ export const LUL = [
 	'MASTER',
 	'DEV'
 ];
+
+export const LOLKA = [
+	'LUL'
+];
