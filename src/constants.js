@@ -6,5 +6,6 @@ export const TASK_STATUSES = [
 
 export const LUL = [
 	'MASTER',
-	'DEV'
+	'DEV',
+	'MASTER2'
 ];
