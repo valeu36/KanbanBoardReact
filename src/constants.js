@@ -11,5 +11,6 @@ export const LUL = [
 ];
 
 export const LOLKA = [
-	'LUL'
+	'LUL',
+	'lolka',
 ];
