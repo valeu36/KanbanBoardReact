@@ -3,3 +3,7 @@ export const TASK_STATUSES = [
 	'In Progress',
 	'Done'
 ];
+
+export const LUL = [
+	'MASTER'
+];
