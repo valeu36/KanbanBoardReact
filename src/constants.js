@@ -14,5 +14,6 @@ export const LOLKA = [
 	'LUL',
 	'lolka',
 	'qwer',
-	'hello'
+	'hello',
+	'lululul'
 ];
