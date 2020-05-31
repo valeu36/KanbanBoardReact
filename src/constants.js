@@ -19,5 +19,6 @@ export const LOLKA = [
 	'qwer',
 	'hello',
 	'lululul',
+	'1234567',
 	'1234567'
 ];
