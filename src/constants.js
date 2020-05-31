@@ -17,5 +17,6 @@ export const LOLKA = [
 	'lolka',
 	'qwer',
 	'hello',
-	'lululul'
+	'lululul',
+	'1234567'
 ];
