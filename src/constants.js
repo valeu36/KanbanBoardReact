@@ -7,7 +7,9 @@ export const TASK_STATUSES = [
 export const LUL = [
 	'MASTER',
 	'DEV',
-	'MASTER2'
+	'MASTER2',
+	'123',
+	'12345'
 ];
 
 export const LOLKA = [
