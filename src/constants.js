@@ -10,7 +10,8 @@ export const LUL = [
 	'MASTER2',
 	'123',
 	'12345',
-	'123456'
+	'123456',
+	'1234567'
 ];
 
 export const LOLKA = [
