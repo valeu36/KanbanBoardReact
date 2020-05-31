@@ -23,5 +23,6 @@ export const LOLKA = [
 	'1234567',
 	'1234567',
 	'qwerqwerqwerqwerqe',
-	'adsfadsfasdfadsf'
+	'adsfadsfasdfadsf',
+	'adsfadsfkjads;kfjdaskfjadskfj'
 ];
