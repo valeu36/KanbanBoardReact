@@ -11,7 +11,7 @@ class App extends React.Component {
         <Board />
         qwerty
 				Some shit, Some shit qwer
-        LUUUUUUL LUUUUUUUUL
+        LUUUUUUL LUUUUUUUUL LUUUUUUUUUUUUUUUUUUUUL
         MASTER LUL 2
         dev dev dev
         hello
