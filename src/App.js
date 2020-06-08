@@ -8,9 +8,10 @@ class App extends React.Component {
 	render() {
 		return (
 			<div className='App container'>
-				<Board />
+        <Board />
+        qwerty
 				Some shit, Some shit qwer
-        LUUUUUUL LUUUUUUUUL luuuul
+        LUUUUUUL LUUUUUUUUL LUUUUUUUUUUUUUUUUUUUUL
         MASTER LUL 2
         dev dev dev
         hello
