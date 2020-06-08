@@ -12,6 +12,7 @@ class App extends React.Component {
 				Some shit, Some shit qwer
         LUUUUUUL LUUUUUUUUL
         MASTER LUL 2
+        dev dev dev
 			</div>
 		);
 	}
