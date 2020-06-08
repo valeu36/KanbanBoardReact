@@ -17,5 +17,4 @@ class App extends React.Component {
 		);
 	}
 }
-HELLO
 export default App;
