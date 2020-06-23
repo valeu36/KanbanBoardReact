@@ -27,5 +27,6 @@ export const LOLKA = [
 	'qwerqwerqwerqwerqe',
 	'adsfadsfasdfadsf',
 	'adsfadsfkjads;kfjdaskfjadskfj',
-	'lulsdafasdfasdfasdfasdfasdfasdfasdfasd'
+	'lulsdafasdfasdfasdfasdfasdfasdfasdfasd',
+	'master commit'
 ];
