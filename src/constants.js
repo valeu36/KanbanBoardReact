@@ -11,7 +11,8 @@ export const LUL = [
 	'123',
 	'12345',
 	'123456',
-	'1234567'
+	'1234567',
+	'lolsadkjasLKDJAKLSJDKSDJFK'
 ];
 
 export const LOLKA = [
