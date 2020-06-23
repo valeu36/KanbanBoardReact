@@ -12,7 +12,8 @@ export const LUL = [
 	'12345',
 	'123456',
 	'1234567',
-	'lolsadkjasLKDJAKLSJDKSDJFK'
+	'lolsadkjasLKDJAKLSJDKSDJFK',
+	'dev'
 ];
 
 export const LOLKA = [
