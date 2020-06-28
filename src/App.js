@@ -16,6 +16,7 @@ class App extends React.Component {
         dev dev dev
         hello
         asdfadsf
+        LUUUUULLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL
 			</div>
 		);
 	}
